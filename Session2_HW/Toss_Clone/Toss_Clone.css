@@ -22,6 +22,11 @@
     font-weight: bold;
 }
 
+.description a {
+    text-decoration: none;
+    color:#58A6FF;
+}
+
 .block_wrapper {
     
     display: flex;
