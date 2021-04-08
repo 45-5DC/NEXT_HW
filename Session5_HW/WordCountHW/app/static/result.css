@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
+
+* {
+    font-family: 'Gamja Flower', cursive;
+}
+
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2020/07/02/04/31/matrix-5361690_1280.png);
+}
+
+body p {
+    color: white;
+    font-size: 30px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.title p {
+    font-size: 50px;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: orangered;
+}
+
+.title img {
+    width: 300px;
+    height: 180px;
+    padding: 0 30px 0 0;
+}
+
+.result_container {
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+.result_box {
+    background-color: white;
+}
+
+.result_box p {
+    color: black;
+}

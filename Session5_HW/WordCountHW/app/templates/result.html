@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}">
+    <title>result</title>
+</head>
+
+<body>
+    <div class="title">
+        <img src="../static/image_file/너굴맨.jpg"/>
+        <p>당신이 입력한 텍스트는 <br> 너굴맨이 처리했으니 안심하라구!</p>
+    </div>
+    <div class="result_container">
+        <p>입력한 텍스트: </p>
+        <div class="result_box">
+            <p>{{text}}</p>
+        </div>
+    </div>
+    <div class="result_container">
+        <p>글자수: </p>
+        <div class="result_box">
+            <p>{{total_len}}</p>
+        </div>
+    </div>
+    <div class="result_container">
+        <p>공백 제외 글자수: </p>
+        <div class="result_box">
+            <p>{{no_blank_len}}</p>
+        </div>
+    </div>
+    <div class="result_container">
+        <p>단어 수(어절 수): </p>
+        <div class="result_box">
+            <p> {{words_len}}</p>
+        </div>
+    </div>
+</body>
+
+</html>
