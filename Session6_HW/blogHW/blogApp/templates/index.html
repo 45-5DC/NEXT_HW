@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+</head>
+<body>
+    <div class="title">
+        <h1>Welcome!</h1>
+    </div>
+    <div class="category">
+        <h2>Category</h2>
+        <br>
+        <a href="{% url 'movie' %}">영화 (게시글 수: {{movies_total}})</a>
+        <br>
+        <a href="{% url 'drama' %}">드라마 (게시글 수: {{dramas_total}})</a>
+        <br>
+        <a href="{% url 'programming' %}">프로그래밍 (게시글 수: {{programmings_total}})</a>
+    </div>
+    <br>
+    <div class="write">
+        <a href="{% url 'new' %}">글 쓰러 가기</a>
+    </div>
+</body>
+
+</html>

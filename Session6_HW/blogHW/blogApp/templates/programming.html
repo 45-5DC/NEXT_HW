@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'programming.css' %}">
+    <title>programming</title>
+</head>
+<body>
+    <h1>Programming</h1>
+    <div class="content">
+        <h2>posting</h2>
+    <ul>
+        {% for article in articles %}
+        <li>
+            <a href="{% url 'detail' article.pk %}">{{article.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    </div>
+
+    <br>
+    <a href="{% url 'new' %}">글 쓰러 가기</a>
+    <br>
+    <a href="{% url 'index' %}">홈으로 돌아가기</a>
+
+</body>
+</html>
