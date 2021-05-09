@@ -24,7 +24,7 @@
                 </div>
                 <div class="deadline">
                     <label for="deadline">마감 기한</label>
-                    <input type="datetime-local" id="deadline" name="deadline" value="{{ post.deadline | date:'Y-m-d' }}T{{ post.deadline | date:'h:i'}}">
+                    <input type="datetime-local" id="deadline" name="deadline" value="{{post.deadline | date:'Y-m-d'}}T{{post.deadline | date:'H:i'}}">
                 </div>
             </div>
             <div class="button">
