@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(66, 204, 204);
+}
+
+.wrapper {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_box {
+    border: dashed white 2px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+}
+
+.deadline {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Hi Melody', cursive;
+    font-size: 30px;
+    color: purple;
+    padding-right: 20px;
+}
+
+p {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: white;
+}
+
+.action {
+    padding: 100px 0;
+}
+
+a  {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    font-family: 'Nanum Gothic', sans-serif;
+    border-bottom: solid 2px white;
+    margin: 0 20px;
+} 

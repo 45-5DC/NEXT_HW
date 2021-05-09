@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'new.css' %}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>할 일 추가하기</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="content_box">
+                <div class="title">
+                    <label for="title">제목</label>
+                    <input type="text" id="title" name="title" placeholder="제목을 입력해주세요.">
+                </div>
+                <div class="detail">
+                    <label for="content">세부사항</label>
+                    <textarea name="content" id="content" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea>
+                </div>
+                <div class="deadline">
+                    <label for="deadline">마감 기한</label>
+                    <input type="datetime-local" id="deadline" name="deadline">
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit">작성 완료</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
