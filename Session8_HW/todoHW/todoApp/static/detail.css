@@ -1,0 +1,92 @@
+.wrapper {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content_box {
+    border: dashed white 2px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+}
+
+.deadline {
+    display: flex;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Hi Melody', cursive;
+    font-size: 30px;
+    color: purple;
+    padding-right: 20px;
+}
+
+p {
+    font-family: 'Nanum Gothic', sans-serif;
+    color: white;
+}
+
+.action {
+    padding: 50px 0;
+}
+
+.action a  {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    font-family: 'Nanum Gothic', sans-serif;
+    border-bottom: solid 2px white;
+    margin: 0 20px;
+}
+
+.comment {
+    display:flex;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.comment button {
+    background-color: rebeccapurple;
+    color: white
+}
+
+.comment button:hover {
+    background-color: purple;
+    color: white
+}
+
+.comment a {
+    border: solid 1px rebeccapurple;
+    background-color: rebeccapurple;
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 7px;
+}
+
+.comment_content li {
+    margin: 10px 0;
+    list-style: none;
+    padding-left: 0px;
+    font-family:'Nanum Gothic', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+    border: dashed white 1px;
+}
