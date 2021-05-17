@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    {% load socialaccount %}
+    {% providers_media_js %}
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+    {% block css_and_webtitle %}
+
+    {% endblock css_and_webtitle %}
+</head>
+
+<body>
+    <div class="nav_bar">
+        <a href="{% url 'home' %}">홈.</a>
+        {% if user.is_authenticated %}
+        <div>안녕하세요, {{ user.username }}님.</div>
+        <a href="{% url 'logout' %}">로그아웃.</a>
+        <a href="{% url 'mypage' user.pk %}">마이 페이지.</a>
+        <a href="{% url 'new' %}">새 글.</a>
+        {% else %}
+        <a href="{% url 'login' %}">로그인.</a>
+        <a href="{% provider_login_url 'kakao' %}">카카오 로그인.</a>
+        <a href="{% url 'signup' %}">회원가입.</a>
+        {% endif %}
+
+    </div>
+
+    <div class="wrapper">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+
+</html>

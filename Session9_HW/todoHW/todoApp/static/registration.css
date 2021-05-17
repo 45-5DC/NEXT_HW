@@ -1,0 +1,28 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    border-bottom: solid white 2px;
+    margin-bottom: 50px;
+}
+
+button {
+    background-color: rebeccapurple;
+    color: white
+}
+
+button:hover {
+    background-color: purple;
+    color: white
+}
+
+input {
+    font-family: 'Nanum Gothic', sans-serif;
+}

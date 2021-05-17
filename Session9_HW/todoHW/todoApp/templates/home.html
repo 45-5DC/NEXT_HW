@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block css_and_webtitle %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+<title>Todo Home</title>
+{% endblock css_and_webtitle %}
+
+{% block content %}
+<div class="title">
+    <h1>TODO LIST</h1>
+</div>
+<div class="content_box">
+    <ul>
+        {% for post in posts %}
+        <li>
+            <div class="content">
+                <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+                <span>작성자: {{post.author}}</span>
+                <span>남은 기간: {{post.deadline|timeuntil}}</span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="write">
+    <a href="{%	url 'new' %}">할 일 추가하기</a>
+</div>
+{% endblock content %}
