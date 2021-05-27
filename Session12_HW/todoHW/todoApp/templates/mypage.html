@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block css_and_webtitle %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mypage.css' %}">
+<title>My Page</title>
+{% endblock css_and_webtitle %}
+
+{% block content %}
+<div class="title">
+    <h1>{{ user.username }}님의 My page</h1>
+</div>
+
+<div class="content_box">
+    <h2>내 일정</h2>
+    <div class="content_post">
+        <ul>
+            {% for post in user.posts.all|dictsort:"deadline" %}
+            <li>
+                <a href="{% url 'detail' post.pk %}">{{ post.title }}</a>
+                <span>남은 기간: {{post.deadline|timeuntil}}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <h2>내 댓글</h2>
+    <div class="content_comment">
+        <ul>
+            {% for comment in user.comments.all %}
+            <li>
+                <p>{{ comment.content }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}
